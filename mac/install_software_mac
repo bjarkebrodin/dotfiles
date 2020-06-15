@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+chmod +x mac/install_homebrew
+./mac/install_homebrew
+
+if [[ ! $(brew -v) ]] 
+then 
+        echo 'Homebrew not installed, exiting!'
+        echo 'Try installing homebrew manually, and rerun'
+        exit
+fi
+
+# Todo, ask before installing?
+
+# Spotify
+brew cask install spotify
+
+# Google Chrome
+brew cask install google-chrome

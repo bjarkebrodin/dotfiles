@@ -1,0 +1,19 @@
+function installHomebrew(){
+        URL=https://raw.githubusercontent.com/Homebrew/install/master/install.sh
+        env bash <(curl -fsSL $URL)
+
+        if [[ $? -ne 0 ]]
+        then    
+                echo "Homebrew not installed properly, exiting"; exit
+        fi
+}
+
+brew -v>/dev/null
+
+if [[ $? -ne 0 ]]
+then
+        installHomewbrew
+else
+        echo "Homebrew already installed, moving on"
+fi
+

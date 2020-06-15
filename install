@@ -1,0 +1,5 @@
+if [[ $(echo $OSTYPE|grep 'darwin') ]]; then
+	chmod +x ./mac/install
+	./mac/install
+fi
+
