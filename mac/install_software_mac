@@ -12,6 +12,9 @@ fi
 
 # Todo, ask before installing?
 
+# Spectacle
+brew cask install spectacle
+
 # Spotify
 brew cask install spotify
 

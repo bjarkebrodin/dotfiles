@@ -1,3 +1,29 @@
+#### GENERAL
+
+
+#### POWER SETTINGS 
+
+# Remove the sleep image file to save disk space
+sudo rm /private/var/vm/sleepimage
+# Create a zero-byte file instead…
+sudo touch /private/var/vm/sleepimage
+# …and make sure it can’t be rewritten
+sudo chflags uchg /private/var/vm/sleepimage
+
+
+
+#### TRACKPAD
+
+# Enable 'tap to click'
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -int 1
+defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
+
+
+#### MISSION CONTROL
+
+
+
+#### DOCK    
 
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
@@ -12,6 +38,23 @@ defaults write com.apple.dock static-only -bool true
 defaults write com.apple.dock launchanim -bool false
 
 # Hide Dock
-defaults write com.apple.dock autohide -bool true && killall Dock
-defaults write com.apple.dock autohide-delay -float 1000 && killall Dock
-defaults write com.apple.dock no-bouncing -bool TRUE && killall Dock
+defaults write com.apple.dock autohide -bool true 
+defaults write com.apple.dock autohide-delay -float 1000 
+defaults write com.apple.dock no-bouncing -bool TRUE
+
+
+
+#### SPECTACLE
+
+# Apply preffered keybinds
+cp -r mac/spectacle_bindings ~/Library/Application\ Support/Spectacle/Shortcuts.json
+
+
+#### KILL AND FINISH UP
+for application in \
+	"Dock"
+do
+	killall "$application" &> /dev/null
+done
+
+echo "Settings applied, restart your system for driver settings to take effect :)"
