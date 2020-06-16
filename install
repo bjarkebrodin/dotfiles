@@ -3,3 +3,5 @@ if [[ $(echo $OSTYPE|grep 'darwin') ]]; then
 	./mac/install
 fi
 
+chmod +x ./zsh/install
+./zsh/install
