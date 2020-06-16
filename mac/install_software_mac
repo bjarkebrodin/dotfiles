@@ -42,6 +42,7 @@ brew install lua
 brew install fd
 brew install ripgrep
 brew install tldr
+brew install node
 
 # Update pip
 sudo -H pip3 install --upgrade pip
@@ -58,9 +59,17 @@ brew cask install spotify
 # Google Chrome
 brew cask install google-chrome
 
+# Figma
+brew cask install figma
+
 # iTerm2
 brew cask install iterm2
 
 # Fonts 
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code
+
+# Sass
+npm install -g sass
+
+
