@@ -4,15 +4,16 @@
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
-# Ask for the administrator password upfront
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 
 
 #### GENERAL
+
+# Set computer name (as done via System Preferences → Sharing)
+pc_name='tsndre'
+sudo scutil --set ComputerName $pc_name 
+sudo scutil --set HostName $pc_name 
+sudo scutil --set LocalHostName $pc_name
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $pc_name
 
 # Set Colors
 defaults write AppleHighlightColor -string "1.000000 0.874510 0.701961 Orange"
@@ -50,41 +51,41 @@ defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 #### POWER SETTINGS 
 
 # Enable lid wakeup
-sudo pmset -a lidwake 1
+sudo pmset -a lidwake 1 &> /dev/null
 
 # Restart automatically on power loss
-sudo pmset -a autorestart 1
+sudo pmset -a autorestart 1 &> /dev/null
 
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
 
 # Sleep the display after 15 minutes
-sudo pmset -a displaysleep 15
+sudo pmset -a displaysleep 15 &> /dev/null
 
 # Disable machine sleep while charging
-sudo pmset -c sleep 0
+sudo pmset -c sleep 0 &> /dev/null
 
 # Set machine sleep to 5 minutes on battery
-sudo pmset -b sleep 5
+sudo pmset -b sleep 10 &> /dev/null
 
 # Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
+sudo pmset -a standbydelay 86400 &> /dev/null
 
 # Never go into computer sleep mode
-sudo systemsetup -setcomputersleep Off > /dev/null
+sudo systemsetup -setcomputersleep Off &> /dev/null
 
 # Hibernation mode
 # 0: Disable hibernation (speeds up entering sleep mode)
 # 3: Copy RAM to disk so the system state can still be restored in case of a
 #    power failure.
-sudo pmset -a hibernatemode 0
+sudo pmset -a hibernatemode 0 > /dev/null
 
 # Remove the sleep image file to save disk space
-sudo rm /private/var/vm/sleepimage
+# sudo rm /private/var/vm/sleepimage
 # Create a zero-byte file instead…
-sudo touch /private/var/vm/sleepimage
+# sudo touch /private/var/vm/sleepimage
 # …and make sure it can’t be rewritten
-sudo chflags uchg /private/var/vm/sleepimage
+# sudo chflags uchg /private/var/vm/sleepimage
 
 
 
@@ -146,6 +147,15 @@ defaults write com.apple.dock no-bouncing -bool TRUE
 
 # Apply preffered keybinds
 cp -r mac/spectacle_bindings ~/Library/Application\ Support/Spectacle/Shortcuts.json
+
+
+
+#### ITERM2
+
+defaults write com.googlecode.iterm2 TerminalMargin -int 15
+defaults write com.googlecode.iterm2 TerminalVMargin -int 5
+defaults write com.googlecode.iterm2 WindowNumber -int 0
+
 
 
 

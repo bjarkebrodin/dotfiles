@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# Ask for the administrator password upfront
+sudo -vH
+
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 chmod +x mac/install_homebrew
 ./mac/install_homebrew
 
@@ -10,7 +16,38 @@ then
         exit
 fi
 
-# Todo, ask before installing?
+brew update
+brew upgrade
+
+# More recent versions of some macOS tools.
+brew install vim 
+brew install grep
+brew install openssh
+brew install screen
+brew install php
+brew install gmp
+
+# `wget` with IRI support.
+brew install wget 
+
+# Misc utils
+brew install coreutils
+brew install moreutils
+brew install findutils
+brew install gnu-sed 
+brew install tree
+brew install python
+brew install lynx
+brew install lua
+brew install fd
+brew install ripgrep
+brew install tldr
+
+# Update pip
+sudo -H pip3 install --upgrade pip
+
+# Ranger
+sudo -H pip3 install ranger-fm
 
 # Spectacle
 brew cask install spectacle
@@ -20,3 +57,10 @@ brew cask install spotify
 
 # Google Chrome
 brew cask install google-chrome
+
+# iTerm2
+brew cask install iterm2
+
+# Fonts 
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code
