@@ -17,3 +17,6 @@ bindkey "^[[1;3D" backward-word
 # Alt up/down goes to beggining/end of line
 bindkey "^[[1;3A" beginning-of-line
 bindkey "^[[1;3B" end-of-line
+
+# Enable vim mode
+bindkey -v

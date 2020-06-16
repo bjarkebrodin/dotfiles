@@ -1,0 +1,2 @@
+if [[ -f ~/.vimrc ]]; then rm ~/.vimrc; fi
+cp ./vim/.vimrc ~/.vimrc

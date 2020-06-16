@@ -5,3 +5,6 @@ fi
 
 chmod +x ./zsh/apply
 ./zsh/apply
+
+chmod +x ./vim/apply
+./vim/apply
