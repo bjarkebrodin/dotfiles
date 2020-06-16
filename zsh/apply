@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+
+# Copy over configuration
+cp -fR ./zsh/.zprezto "${ZDOTDIR:-$HOME}"/

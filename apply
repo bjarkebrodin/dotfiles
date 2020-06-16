@@ -3,3 +3,5 @@ if [[ $(echo $OSTYPE|grep 'darwin') ]]; then
 	./mac/apply
 fi
 
+chmod +x ./zsh/apply
+./zsh/apply
