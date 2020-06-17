@@ -1,3 +1,5 @@
+#!/usr/bin/env bash 
+
 if [[ $(echo $OSTYPE|grep 'darwin') ]]; then
 	chmod +x ./mac/apply
 	./mac/apply

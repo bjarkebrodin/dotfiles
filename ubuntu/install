@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# The Basics
+sudo apt-get install git
+sudo apt-get install vim
+
+# Alacritty
+sudo add-apt-repository -a ppa:mmstick76/alacritty
+sudo apt install alacritty
+
+# Tmux
+sudo apt-get install tmux
+
+# Spotify
+sudo snap install spotify
