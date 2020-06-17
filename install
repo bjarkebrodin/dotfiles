@@ -1,7 +1,12 @@
-if [[ $(echo $OSTYPE|grep 'darwin') ]]; then
-	chmod +x ./mac/install
-	./mac/install
-fi
+#!/usr/bin/env bash
+
+if [[ $(echo $OSTYPE|grep 'darwin') ]]; then 
+	chmod +x ./mac/install 
+	./mac/install 
+elif [[ $(uname -a|grep 'ubuntu') ]]; then
+	chmod +x ./ubuntu/install
+	./ubuntu/install
+fi 
 
 chmod +x ./zsh/install
 ./zsh/install
