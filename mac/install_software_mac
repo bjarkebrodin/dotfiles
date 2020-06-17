@@ -72,4 +72,17 @@ brew cask install font-fira-code
 # Sass
 npm install -g sass
 
+# VSCode
+brew cask install visual-studio-code
 
+# IntelliJ IDEA Ultimate
+brew cask install intellij-idea
+
+# Clion
+brew cask install clion
+
+# Visual Studio
+brew cask install visual-studio
+
+# Latex
+brew cask install mactex-no-gui

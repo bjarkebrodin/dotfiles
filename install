@@ -5,3 +5,6 @@ fi
 
 chmod +x ./zsh/install
 ./zsh/install
+
+# If no projects folder in home exists; make one
+if [[ ! -d ~/Projects ]]; then mkdir ~/Projects; fi
