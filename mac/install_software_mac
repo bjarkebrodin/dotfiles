@@ -86,3 +86,6 @@ brew cask install visual-studio
 
 # Latex
 brew cask install mactex-no-gui
+
+# Alacritty
+brew cask install alacritty

@@ -10,3 +10,5 @@ chmod +x ./zsh/apply
 
 chmod +x ./vim/apply
 ./vim/apply
+
+cp -f .alacritty.yml ~
