@@ -20,3 +20,6 @@ bindkey "^[[1;3B" end-of-line
 
 # Enable vim mode
 bindkey -v
+
+# Source Aliases
+source ~/.aliases

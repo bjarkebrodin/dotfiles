@@ -1,4 +1,3 @@
 #!/usr/bin/env zsh
 
-if [[ -f ~/.vimrc ]]; then rm ~/.vimrc; fi
-cp ./vim/.vimrc ~/.vimrc
+ln -sf ~/.dotfiles/vim/.vimrc ~/
