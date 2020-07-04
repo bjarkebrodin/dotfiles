@@ -1,4 +1,0 @@
-chmod +x ./mac/macos_settings
-./mac/macos_settings
-
-if [[ ! -f ~/.hushlogin ]]; then touch ~/.hushlogin; fi

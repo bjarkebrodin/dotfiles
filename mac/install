@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-# Install Software
-chmod +x ./mac/install_software_mac
-./mac/install_software_mac
-
-# Apply Settings
-chmod +x ./mac/apply
-./mac/apply
