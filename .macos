@@ -48,7 +48,6 @@ to_install=(
 	visual-studio
 	visual-studio-code
 	spectacle
-	alacritty
 	font-fira-code
 	iterm2
 )
