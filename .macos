@@ -50,6 +50,7 @@ to_install=(
 	spectacle
 	font-fira-code
 	iterm2
+	figma
 )
 
 brew cask install ${to_install[@]}
