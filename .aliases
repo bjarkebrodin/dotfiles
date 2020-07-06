@@ -1,4 +1,5 @@
-alias la='ls -AHhGgrto'
+alias la='ls -AHhGgrtop'
+alias ll='ls -HhGgrtop'
 
 # Git
 alias gs='git status'
