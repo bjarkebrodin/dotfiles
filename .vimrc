@@ -4,6 +4,9 @@ set nocompatible
 " Enable syntax highlighting
 syntax on
 
+" Enable autoindent
+set autoindent
+
 " Enable line numbers
 set number
 
