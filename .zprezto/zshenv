@@ -1,17 +1,11 @@
-#
-# Defines environment variables.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
+# path appendices
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-export WINHOME='/mnt/c/Users/Bjarke\ Brodin'
-alias wh=$WINHOME
-
-# dotnet tools
-export PATH="$PATH:$HOME/.dotnet/tools/"
+# arch locale fix
+export LC_MESSAGES="C"
+export LC_ALL="C"
