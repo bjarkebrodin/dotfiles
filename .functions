@@ -1,10 +1,10 @@
 
 function addcommit {
-	eval "git add $1"
-	eval "git commit -m $2"
+	ga $1
+	gcm $2
 }
 
 function addcommitpush {
-	eval "addcommit $1 $2"
+	addcommit $1 $2
 	git push
 }
