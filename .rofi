@@ -1,0 +1,16 @@
+# This lives in this file: ~/.config/rofi/config
+rofi.color-enabled:     true
+rofi.color-window:      #1c1c22, #000000, #3e646f
+rofi.color-normal:      #1c1c22, #d9d6ca, #85aab6, #d9d6ca, #78824B
+rofi.color-active:      #1c1c22, #d9d6ca, #85aab6, #d9d6ca, #78824B
+rofi.color-urgent:      #1c1c22, #d9d6ca, #85aab6, #d9d6ca, #78824B
+
+rofi.separator-style:   none
+rofi.sidebar-mode:      false
+rofi.lines:             1
+rofi.font:              Source Code Pro Semibold 12
+rofi.bw:                1
+rofi.columns:           1
+rofi.padding:           10
+rofi.fixed-num-lines:   true
+rofi.hide-scrollbar:    true
