@@ -39,12 +39,8 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+w kill
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# start rofi (a program launcher)
+bindsym $mod+space exec rofi -show run
 
 # change focus
 bindsym $mod+j focus left
