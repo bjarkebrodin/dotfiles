@@ -1,3 +1,5 @@
+# NB! this should link to THIS FILE ~/.config/i3/config
+
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 
