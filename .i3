@@ -17,7 +17,7 @@ font pango:Fira Code semi-bold 12
 # they are included here as an example. Modify as you see fit.
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock -- dm-tool lock
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -41,6 +41,10 @@ bindsym $mod+w kill
 
 # start rofi (a program launcher)
 bindsym $mod+space exec rofi -show run
+
+# adjust screen brightness
+#bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
+#bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 
 # change focus
 bindsym $mod+j focus left
@@ -69,7 +73,7 @@ bindsym $mod+v split v
 #bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-#bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
 #bindsym $mod+space focus mode_toggle
@@ -156,3 +160,6 @@ mode "resize" {
 # bar {
 #         status_command i3status
 # }
+
+# wallpaper
+exec --no-startup-id /usr/bin/nitrogen --restore

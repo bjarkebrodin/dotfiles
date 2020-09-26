@@ -1,10 +1,1 @@
 
-function addcommit {
-	ga $1
-	gcm $2
-}
-
-function addcommitpush {
-	addcommit $1 $2
-	git push
-}
