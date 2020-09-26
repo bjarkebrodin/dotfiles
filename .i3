@@ -8,7 +8,7 @@ set $mod Mod4
 
 # style
 default_border none
-new_window pixel 1
+new_window pixel 0
 
 # fonts
 font pango:Fira Code semi-bold 12
