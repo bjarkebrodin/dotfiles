@@ -10,4 +10,8 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-source "$HOME/.sdkman/bin/sdkman-init.sh"
+export WINHOME='/mnt/c/Users/Bjarke\ Brodin'
+alias wh=$WINHOME
+
+# dotnet tools
+export PATH="$PATH:$HOME/.dotnet/tools/"
