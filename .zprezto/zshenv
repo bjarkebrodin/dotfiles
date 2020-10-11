@@ -3,15 +3,18 @@
 #
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
+#   Bjarke Brodin <bjarke@brodin.dk>
 
 # Ensure that a non-login, non-interactive shell has a defined environment.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-export WINHOME='/mnt/c/Users/Bjarke\ Brodin'
-alias wh=$WINHOME
-
 # dotnet tools
 export PATH="$PATH:$HOME/.dotnet/tools/"
+<<<<<<< HEAD
+=======
+
+# classpath appendices
+export CLASSPATH="$CLASSPATH:/Library/Jar/"
+>>>>>>> dd37233c3704e20a49da316f2ef8c98781ab6077

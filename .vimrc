@@ -1,40 +1,46 @@
-" Disable vi compatibility mode
-set nocompatible
-
-" Enable syntax highlighting
-syntax on
-
-" Enable autoindent
-set autoindent
-
-" Enable line numbers
-set number
-
-" Enable relative line numbers
-set relativenumber
-
-" Disable startup message
-set shortmess+=I
-
-" Make backspace more intuitive
-set backspace=indent,eol,start
-
-" Make search case-insensitive until case search string is case-mixed
-set ignorecase
-set smartcase
-
-" Enable search-as-you-type behaviour
-set incsearch
-
-" 'Q' in normal mode enters Ex mode. You almost never want this.
-nmap Q <Nop>
-
-" Disable audible bell because it's annoying.
-set noerrorbells visualbell t_vb=
-
-" Enable mouse support. You should avoid relying on this too much, but it can
-" sometimes be convenient.
-set mouse+=a 
-
-" Set tab to 2 spaces
+" set tab to 2 spaces
+set expandtab
 set tabstop=2
+
+"
+" miscellaneous
+"
+	set shortmess+=I		" no startup msg
+	set nocompatible 		" -vi compatibility
+
+
+"
+" style
+"
+	syntax on						" syntax highlighting
+
+	set number 					" line numbers
+	set relativenumber	" relative line numbers
+
+
+"
+" controls
+"
+	set autoindent
+	
+	" better backspace 
+	set backspace=indent,eol,start
+
+	" case-insensitive until case search string is case-mixed
+	set ignorecase
+	set smartcase
+
+	" search-as-you-type behaviour
+	set incsearch
+	set hlsearch
+
+	" 'Q' in normal mode enters Ex mode. You almost never want this.
+	nmap Q <Nop>
+
+	" disable audible bell because it's annoying.
+	set noerrorbells visualbell t_vb=
+
+	" Enable mouse support. You should avoid relying on this too much, but it can
+	" sometimes be convenient.
+	set mouse+=a 
+
