@@ -1,0 +1,6 @@
+function runcs {
+	csc.exe "$1.cs"
+	EXECUTABLE=$1.exe
+	./"$EXECUTABLE"
+	rm -f "$EXECUTABLE"
+}
