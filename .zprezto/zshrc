@@ -11,11 +11,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 source ~/.aliases
-<<<<<<< HEAD
 source ~/.functions
-=======
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/bjarkebrodin/.sdkman"
 [[ -s "/Users/bjarkebrodin/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/bjarkebrodin/.sdkman/bin/sdkman-init.sh"
->>>>>>> dd37233c3704e20a49da316f2ef8c98781ab6077

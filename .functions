@@ -4,3 +4,16 @@ function runcs {
 	./"$EXECUTABLE"
 	rm -f "$EXECUTABLE"
 }
+
+function wh {
+  cd "/mnt/c/Users/Bjarke Brodin/"
+}
+
+function rand {
+	if [[ $2 -lt $1 ]]; then 
+		echo "usage: rand min max"; 
+	else
+		let "num = $RANDOM % $2 + $1";
+		echo $num;
+	fi
+}
