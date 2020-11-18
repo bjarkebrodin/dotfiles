@@ -11,5 +11,4 @@ alias gpull='git pull'
 alias gpush='git push'
 alias gmerge='git merge'
 
-# Postgresql
-alias postgres='brew services start postgres'
+alias python='python3.9'

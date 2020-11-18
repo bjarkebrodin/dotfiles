@@ -13,5 +13,11 @@ fi
 # dotnet tools
 export PATH="$PATH:$HOME/.dotnet/tools/"
 
+# cargo
+export PATH="$PATH:$HOME/.cargo/bin/"
+
+# python
+export PATH="$PATH:$HOME/Library/Python/*/bin/"
+
 # classpath appendices
 export CLASSPATH="$CLASSPATH:/Library/Jar/"
