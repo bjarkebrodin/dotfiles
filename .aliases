@@ -11,4 +11,5 @@ alias gpull='git pull'
 alias gpush='git push'
 alias gmerge='git merge'
 
-alias python='python3.9'
+alias python='python3'
+alias pip='pip3'
