@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-function rand {
-	if [[ $2 -lt $1 ]]; then 
-		echo "usage: rand min max"; 
-	else
-		let "num = $RANDOM % $2 + $1";
-		echo $num;
-	fi
+function nb {
+  cd ~/Notes &&
+    git pull &&
+    jupyter-notebook
 }
