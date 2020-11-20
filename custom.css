@@ -1,0 +1,81 @@
+/* remove dinosaur background coloring */
+body {
+  background-color: inherit !important;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Segoe UI';
+}
+
+h1 {
+  font-size: 2.8em;
+  font-weight: 300!important;
+}
+
+h2 {
+  font-size: 1.9em;
+  font-weight: 400!important;
+}
+
+h3 {
+  font-size: 1.7em;
+  font-weight: 400!important;
+}
+
+h4 {
+  font-size: 1.3em;
+  font-weight: 500!important;
+}
+
+h5 {
+  font-style: normal!important;
+  font-weight: 200!important;
+}
+
+#notebook-container {
+    padding: 1em;
+    min-height: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/* Remove selection border */
+div.cell.selected, 
+div.cell.selected.jupyter-soft-selected {
+  top: 0;
+  border: none;
+}
+
+/* Make menubar hidden until needed */
+#menubar {
+  height: 1px!important;
+  overflow: hidden!important;
+}
+
+#menubar:hover {
+  height: auto!important;
+  overflow: visible!important;
+}
+
+#notebook-container {
+  max-width: 600px;
+}
+
+/* Make prompt smaller */
+div.prompt {
+  min-width: 2em!important;
+}
+
+/* Make prompt nicer */
+div.cell.selected:before, 
+div.cell.selected.jupyter-soft-selected:before {
+  top: 0px !important;
+  display: none;
+  background-color: var(--jp-ui-font-color0);
+}
+
+div.cell.selected {
+  top: 0px !important;
+  left: 0px !important;
+  border-left: 1px solid rgba(0,0,0,.3);
+}
