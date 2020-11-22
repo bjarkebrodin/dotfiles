@@ -3,5 +3,12 @@
 function nb {
   cd ~/Notes &&
     git pull &&
-    jupyter-notebook
+    jupyter-notebook &&
+    cd -
 }
+
+function coulouris {
+  open -a Preview ~/Books/Distributed\ Systems/Distributed\ Systems\ Concepts\ and\ Design\ -\ 5th\ Edition.pdf  
+}
+
+

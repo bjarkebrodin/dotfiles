@@ -4,7 +4,11 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Segoe UI';
+  font-family: 'Segoe UI', inherit;
+}
+
+a {
+  text-decoration: none!important;
 }
 
 h1 {
@@ -29,7 +33,20 @@ h4 {
 
 h5 {
   font-style: normal!important;
-  font-weight: 200!important;
+  font-weight: 300!important;
+  opacity: .8;
+}
+
+/* Cell tweaks */
+div.cell {
+  padding: 5px 10px 5px 0!important;
+}
+div.prompt {
+  min-width: 6em;
+}
+div.text_cell.unrendered .input_area {
+  border: none!important; 
+  background: none!important;
 }
 
 #notebook-container {
@@ -58,12 +75,14 @@ div.cell.selected.jupyter-soft-selected {
 }
 
 #notebook-container {
-  max-width: 600px;
+  max-width: 700px;
 }
 
 /* Make prompt smaller */
-div.prompt {
-  min-width: 2em!important;
+div.input_prompt,
+div.output_prompt {
+  opacity: 0.4;
+  text-transform: uppercase;
 }
 
 /* Make prompt nicer */
@@ -78,4 +97,14 @@ div.cell.selected {
   top: 0px !important;
   left: 0px !important;
   border-left: 1px solid rgba(0,0,0,.3);
+}
+
+/* Make code nicer */
+div.code_cell .input_area {
+  border: none!important;
+  background-color: transparent!important;
+}
+
+.output_collapsed {
+  border: none!important;
 }
