@@ -65,12 +65,14 @@ div.cell.selected.jupyter-soft-selected {
 
 /* Make menubar hidden until needed */
 #menubar {
-  height: 1px!important;
+  opacity: 0!important;
   overflow: hidden!important;
+  -webkit-box-shadow: none!important;
+  border: none!important;
 }
 
 #menubar:hover {
-  height: auto!important;
+  opacity: 1!important;
   overflow: visible!important;
 }
 

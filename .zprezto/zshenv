@@ -19,5 +19,9 @@ export PATH="$PATH:$HOME/.cargo/bin/"
 # python
 export PATH="$PATH:$HOME/Library/Python/*/bin/"
 
+# postgresql
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/13/bin"
+export PGUSER="postgres"
+
 # classpath appendices
-export CLASSPATH="$CLASSPATH:/Library/Jar/"
+export CLASSPATH="$CLASSPATH:$HOME/Library/Jar/"
