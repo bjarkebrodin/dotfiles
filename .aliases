@@ -13,3 +13,5 @@ alias gmerge='git merge'
 
 alias python='python3'
 alias pip='pip3'
+
+alias azure='open -a "Azure Data Studio - Insiders"'

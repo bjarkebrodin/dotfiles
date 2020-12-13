@@ -18,8 +18,13 @@ filetype indent on
   set termguicolors
 	set number 					" line numbers
 	set relativenumber	" relative line numbers
-  set background=dark
+
   colorscheme gruvbox
+
+  highlight Normal ctermbg=none guibg=none
+  highlight SignColumn ctermbg=none guibg=none
+  highlight LineNr ctermbg=none guibg=none
+  
 
 " indent
   set expandtab
