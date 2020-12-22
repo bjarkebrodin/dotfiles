@@ -1,0 +1,13 @@
+" author 
+" Bjarke Brodin Larsen - bjarke@brodin.dk
+
+filetype plugin indent on
+
+" show relative line numbering
+set relativenumber
+
+" remove annoying bell
+set vb
+set t_vb=
+
+
