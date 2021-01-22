@@ -10,6 +10,14 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+# todo: gather path vars in array and export in batch
+
+# kattis and more
+export algo="$HOME/Algorithms"
+export kattis="$algo/Kattis"
+export PATH="$PATH:$kattis/bin/"
+
+
 # dotnet tools
 export PATH="$PATH:$HOME/.dotnet/tools/"
 

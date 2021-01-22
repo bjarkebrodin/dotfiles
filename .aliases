@@ -1,6 +1,9 @@
 alias la='ls -AHhGgrtop'
 alias ll='ls -HhGgrtop'
-alias l='ll'
+alias l='ll -1'
+
+# Kattis
+alias submit='submit -f'
 
 # Git
 alias gs='git status'
@@ -11,7 +14,13 @@ alias gpull='git pull'
 alias gpush='git push'
 alias gmerge='git merge'
 
+# Remap the things
 alias python='python3'
 alias pip='pip3'
+alias grep='rg'
 
+# Applications
 alias azure='open -a "Azure Data Studio - Insiders"'
+alias preview='open -a "Preview"'
+alias code='open -a "Visual Studio Code - Insiders"'
+alias idea='open -a "IntelliJ IDEA"'
