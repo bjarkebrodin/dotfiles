@@ -1,5 +1,6 @@
 alias la='ls -AHhGgrtop'
 alias ll='ls -HhGgrtop'
+alias l='ls -1'
 
 # Git
 alias gs='git status'

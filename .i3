@@ -4,7 +4,7 @@
 # this file and re-run i3-config-wizard(1).
 
 # variable declarations
-set $mod Mod4
+set $mod Mod1
 
 # style
 default_border none
