@@ -1,40 +1,58 @@
-" Disable vi compatibility mode
-set nocompatible
+filetype indent on
 
-" Enable syntax highlighting
-syntax on
+" no backups necessarry
+set nobackup
+set nowb
+set noswapfile
 
-" Enable autoindent
+" read when changed outside
+set autoread
+
+" miscellaneous
+set shortmess+=I		" no startup msg
+set nocompatible 		" -vi compatibility
+
+" style
+syntax on						" syntax highlighting
+"set termguicolors  " broken on current build(arch not mac)
+set number 					" line numbers
+set relativenumber	" relative line numbers
+set background=dark
+
+colorscheme gruvbox
+
+highlight Normal ctermbg=none guibg=none
+highlight SignColumn ctermbg=none guibg=none
+highlight LineNr ctermbg=none guibg=none
+
+" indent
+set expandtab
+set smarttab
+set shiftwidth=2
+set tabstop=2
+
+" controls
 set autoindent
-
-" Enable line numbers
-set number
-
-" Enable relative line numbers
-set relativenumber
-
-" Disable startup message
-set shortmess+=I
-
-" Make backspace more intuitive
+set smartindent
+set wrap
+																							
+" better backspace 
 set backspace=indent,eol,start
 
-" Make search case-insensitive until case search string is case-mixed
+" case-insensitive until case search string is case-mixed
 set ignorecase
 set smartcase
 
-" Enable search-as-you-type behaviour
+" search-as-you-type behaviour
 set incsearch
+set hlsearch
+set showmatch
 
 " 'Q' in normal mode enters Ex mode. You almost never want this.
 nmap Q <Nop>
 
-" Disable audible bell because it's annoying.
-set noerrorbells visualbell t_vb=
-
-" Enable mouse support. You should avoid relying on this too much, but it can
-" sometimes be convenient.
-set mouse+=a 
-
-" Set tab to 2 spaces
-set tabstop=2
+" disable audible bell because it's annoying.
+set noerrorbells 
+set novisualbell 
+set t_vb=
+"set tm=500mode
