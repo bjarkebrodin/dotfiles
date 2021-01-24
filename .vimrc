@@ -21,9 +21,9 @@ set background=dark
 
 colorscheme gruvbox
 
-highlight Normal ctermbg=none guibg=none
-highlight SignColumn ctermbg=none guibg=none
-highlight LineNr ctermbg=none guibg=none
+highlight Normal ctermbg=none 
+highlight SignColumn ctermbg=none 
+highlight LineNr ctermbg=none 
 
 " indent
 set expandtab
