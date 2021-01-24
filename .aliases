@@ -13,6 +13,8 @@ alias update='git add -u'
 alias commit='git commit'
 alias pull='git pull'
 alias push='git push'
+alias remove='git rm --cached'
+alias move='git mv'
 
 # Remap the things
 alias python='python3'
