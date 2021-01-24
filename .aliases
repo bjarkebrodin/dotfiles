@@ -7,14 +7,7 @@ alias l='ll -1'
 alias submit='submit -f'
 
 # Git
-alias status='echo && git status -bs && echo'
-alias add='git add'
-alias update='git add -u'
-alias commit='git commit'
-alias pull='git pull'
-alias push='git push'
-alias remove='git rm --cached'
-alias move='git mv'
+alias ∆='git'
 
 # Remap the things
 alias python='python3'
@@ -26,3 +19,5 @@ alias find='fd'
 alias azure='open -a "Azure Data Studio - Insiders"'
 alias preview='open -a "Preview"'
 alias code='open -a "Visual Studio Code - Insiders"'
+
+
