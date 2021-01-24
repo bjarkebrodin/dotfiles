@@ -1,0 +1,9 @@
+[user]
+	name = bjal
+	email = bjal@itu.dk
+[core]
+	editor = vim
+[credential]
+	helper = osxkeychain
+[init]
+	defaultBranch = main

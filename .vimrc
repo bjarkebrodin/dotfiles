@@ -1,6 +1,10 @@
 filetype plugin on
 filetype indent on
 
+
+" shared clipboard
+  set clipboard=unnamed
+
 " no backups necessarry
   set nobackup
   set nowb

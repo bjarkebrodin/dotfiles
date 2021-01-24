@@ -10,26 +10,59 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-# todo: gather path vars in array and export in batch
+export DOTS="$HOME/.dotfiles"
+export USERPATH="$DOTS/data/path"
+export USERCLASSPATH="$DOTS/data/classpath"
 
-# kattis and more
-export algo="$HOME/Algorithms"
-export kattis="$algo/Kattis"
-export PATH="$PATH:$kattis/bin/"
+function Reload {
+  exec zsh
+}
 
+function ExportEnvVar {
+  #todo: validate the key, potentially confirm overrides
+  eval "export $1=""'$2'"""
+}
 
-# dotnet tools
-export PATH="$PATH:$HOME/.dotnet/tools/"
+function AppendToClasspath {
+  export CLASSPATH="$CLASSPATH:$1"
+}
 
-# cargo
-export PATH="$PATH:$HOME/.cargo/bin/"
+function AppendToPath {
+  export PATH="$PATH:$1"
+}
 
-# python
-export PATH="$PATH:$HOME/Library/Python/*/bin/"
+function PathAdd { 
+  echo "$1" >> $USERPATH
+  AppendToPath "$1"
+}
 
-# postgresql
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/13/bin"
-export PGUSER="postgres"
+function PathEdit {
+  vim $USERPATH
+}
 
-# classpath appendices
-export CLASSPATH="$CLASSPATH:$HOME/Library/Jar/"
+function ClasspathAdd {
+  echo "$1" >> $USERCLASSPATH
+  AppendToClasspath "$1"
+}
+
+function ClasspathEdit {
+  vim $USERCLASSPATH
+}
+
+# Set ENV 
+ExportEnvVar PGUSER "postgres"
+ExportEnvVar PGPASSWORD "postgres"
+ExportEnvVar ALGS "$HOME/Algorithms"
+ExportEnvVar KATTIS "$ALGS/Kattis"
+
+# Set CLASSPATH
+for line in $(cat "$USERCLASSPATH") 
+do 
+  AppendToClasspath "$line"
+done
+
+# Set PATH after, since path may depend on ENV - can this dependency be broken?
+for line in $(cat "$USERPATH")
+do 
+  AppendToPath "$line"
+done
