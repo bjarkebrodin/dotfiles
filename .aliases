@@ -7,7 +7,7 @@ alias l='ll -1'
 alias submit='submit -f'
 
 # Git
-alias status='git status'
+alias status='echo && git status -bs && echo'
 alias add='git add'
 alias update='git add -u'
 alias commit='git commit -m'
