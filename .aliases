@@ -1,3 +1,4 @@
+# Listing
 alias la='ls -AHhGgrtop'
 alias ll='ls -HhGgrtop'
 alias l='ll -1'
@@ -6,21 +7,20 @@ alias l='ll -1'
 alias submit='submit -f'
 
 # Git
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gcm='git commit -m'
-alias gpull='git pull'
-alias gpush='git push'
-alias gmerge='git merge'
+alias status='git status'
+alias add='git add'
+alias update='git add -u'
+alias commit='git commit -m'
+alias pull='git pull'
+alias push='git push'
 
 # Remap the things
 alias python='python3'
 alias pip='pip3'
 alias grep='rg'
+alias find='fd'
 
 # Applications
 alias azure='open -a "Azure Data Studio - Insiders"'
 alias preview='open -a "Preview"'
 alias code='open -a "Visual Studio Code - Insiders"'
-alias idea='open -a "IntelliJ IDEA"'
