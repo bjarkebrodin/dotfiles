@@ -10,7 +10,7 @@ alias submit='submit -f'
 alias status='echo && git status -bs && echo'
 alias add='git add'
 alias update='git add -u'
-alias commit='git commit -m'
+alias commit='git commit'
 alias pull='git pull'
 alias push='git push'
 
