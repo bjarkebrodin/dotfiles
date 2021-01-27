@@ -5,8 +5,8 @@
 	editor = vim
 [pull]
   rebase = true
-[credentials]
-  helper = libsecret
+[credential]
+  helper = /usr/libexec/git-core/git-credential-libsecret
 [init]
  	defaultBranch = main
 [alias]
