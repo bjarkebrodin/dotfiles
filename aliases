@@ -1,0 +1,15 @@
+# Listing
+alias la='ls -AHhGgrtop'
+alias ll='ls -HhGgrtop'
+alias l='ll -1'
+
+# Remap the things
+alias python='python3'
+alias pip='pip3'
+alias grep='rg'
+alias find='fd'
+
+# Applications
+alias code='code-insiders'
+
+
