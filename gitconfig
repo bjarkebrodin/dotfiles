@@ -19,6 +19,7 @@
 	conf = config --global
 	last = lg -1 HEAD
 	unstage = reset HEAD --
+  amend = commit --amend
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
