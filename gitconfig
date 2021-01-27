@@ -3,14 +3,16 @@
 	email = bjal@itu.dk
 [core]
 	editor = vim
-[credential]
-	helper = osxkeychain
+[pull]
+  rebase = true
+[credentials]
+  helper = libsecret
 [init]
-  	defaultBranch = main
+ 	defaultBranch = main
 [alias]
 	lg = log -10 --pretty=format:\"%Cred%h %C(auto,yellow)%an %Cgreen%s\"
-  	co = checkout
-  	cm = commit
+ 	co = checkout
+ 	cm = commit
 	st = status -bs
 	remove = rm --cached
 	update = add -u
