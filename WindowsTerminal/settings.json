@@ -12,8 +12,11 @@
     // If enabled, formatted data is also copied to your clipboard
     "copyFormatting": false,
 
-    // Launch term in fullscreen
-    "launchMode": "fullscreen",
+    // Launch term in borderless cool mode
+    "launchMode": "focus",
+
+    // Disable annoying bells
+    "bellStyle": "none",
 
     // A profile specifies a command to execute paired with information about how it should look and feel.
     // Each one of them will appear in the 'New Tab' dropdown,

@@ -1,0 +1,25 @@
+[user]
+	name = bjal
+	email = bjal@itu.dk
+[core]
+	editor = vim
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[alias]
+	lg = log -10 --pretty=format:\"%Cred%h %C(auto,yellow)%an %Cgreen%s\"
+ 	co = checkout
+ 	cm = commit
+	st = status -bs
+	remove = rm --cached
+	update = add -u
+	conf = config --global
+	last = lg -1 HEAD
+	unstage = reset HEAD --
+	amend = commit --amend
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
