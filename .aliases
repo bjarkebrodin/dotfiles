@@ -20,4 +20,4 @@ alias azure='open -a "Azure Data Studio - Insiders"'
 alias preview='open -a "Preview"'
 alias code='open -a "Visual Studio Code - Insiders"'
 
-
+alias fsi='dotnet fsi'

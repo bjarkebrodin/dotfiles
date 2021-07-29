@@ -1,5 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/bjarkebrodin/.dotfiles/.vim'
+let g:netrw_dirhist_7='/Users/bjarkebrodin/.vim'
+let g:netrw_dirhist_6='/Users/bjarkebrodin/Algs/Brodin.Algorithms/Collections.Tests'
+let g:netrw_dirhist_5='/Users/bjarkebrodin/ADS21/1Week5'
+let g:netrw_dirhist_4='/Users/bjarkebrodin/ADS21'
 let g:netrw_dirhist_3='/Users/bjarkebrodin/.dotfiles/.git'
 let g:netrw_dirhist_2='/Users/bjarkebrodin/Github/erdeez'
 let g:netrw_dirhist_1='/Users/bjarkebrodin/.vim'

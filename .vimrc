@@ -1,7 +1,6 @@
 filetype plugin on
 filetype indent on
 
-
 " shared clipboard
   set clipboard=unnamed
 
@@ -23,12 +22,12 @@ filetype indent on
 	set number 					" line numbers
 	set relativenumber	" relative line numbers
 
+  set background=dark
   colorscheme gruvbox
 
   highlight Normal ctermbg=none guibg=none
   highlight SignColumn ctermbg=none guibg=none
   highlight LineNr ctermbg=none guibg=none
-  
 
 " indent
   set expandtab
@@ -56,8 +55,17 @@ filetype indent on
 " 'Q' in normal mode enters Ex mode. You almost never want this.
 	nmap Q <Nop>
 
+" space in normal mode writes the file
+  nmap <Space> :w<CR>
+
+" makeshift comment macro -- todo: make a function for making this adaptive
+  autocmd FileType python   nmap / i# <Esc>h
+
 " disable audible bell because it's annoying.
 	set noerrorbells 
   set novisualbell 
   set t_vb=
   set tm=500
+
+
+

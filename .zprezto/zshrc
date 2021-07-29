@@ -12,9 +12,11 @@ fi
 
 source ~/.aliases
 source ~/.functions
+source "$HOME/.zsh/plugins/zsh-system-clipboard/zsh-system-clipboard.zsh"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/bjarkebrodin/.sdkman"
 [[ -s "/Users/bjarkebrodin/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/bjarkebrodin/.sdkman/bin/sdkman-init.sh"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
