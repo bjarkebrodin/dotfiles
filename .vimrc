@@ -57,13 +57,23 @@ filetype indent on
 
 " space in normal mode writes the file
   nmap <Space> :w<CR>
-
-" makeshift comment macro -- todo: make a function for making this adaptive
-  autocmd FileType python   nmap / i# <Esc>h
-
+  
 " disable audible bell because it's annoying.
   set noerrorbells 
   set novisualbell 
   set t_vb=
   set tm=500
+
+
+
+"
+" Python things
+"
+
+" makeshift comment macro -- todo: make a function for making this adaptive
+  autocmd FileType python   nmap / i# <Esc>h
+  
+" lint using flake8 automatically each time you write: 
+"   pip install flake8 if you don't have it already
+"  autocmd FileType python autocmd BufWritePost *.py call flake8#Flake8()
 
